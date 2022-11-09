@@ -37,5 +37,9 @@ export default class Player {
       return "crit hit";
     }
   }
-
+  regHit(num) {
+    if(num <= 60) {
+      return "reg hit";
+    }
+  }
 }
