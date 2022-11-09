@@ -25,10 +25,17 @@ export default class Player {
     this.magic = 80;
   }
 
-  rollDmg() {
+  randomNum() {
     let roll = Math.floor(Math.random() * (100) + 1);
     if (roll <= 100) {
-      return 10;
-    } 
+      return "hit";
+    }
   }
+
+  critHit(num) {
+    if (num >= 61) {
+      return "crit hit";
+    }
+  }
+
 }

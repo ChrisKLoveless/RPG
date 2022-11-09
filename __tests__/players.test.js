@@ -29,15 +29,20 @@ describe("Player", () => {
     expect(newPlayer.str).toEqual(70);
     expect(newPlayer.magic).toEqual(70);
   });
-  test("should set str to 80 and magic to 80",  ()=> {
+  test("should set str to 80 and magic to 80", () => {
     newPlayer.addDruid();
     expect(newPlayer.str).toEqual(80);
     expect(newPlayer.magic).toEqual(80);
   });
 
-  test("should determine hit based on random number", () => {
-    let damage = newPlayer.rollDmg();
-    expect(damage).toEqual(10);
+  test("should generate a random number", () => {
+    let num = newPlayer.randomNum();
+    expect(num).toEqual("hit");
+  });
+
+  test("should determine a critical hit if the roll is greater than 61", () => {
+    let hit = newPlayer.critHit(75);
+    expect(hit).toEqual("crit hit");
   });
 
 });
