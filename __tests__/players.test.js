@@ -22,6 +22,11 @@ describe("Player", () => {
     newPlayer.addMage();
     expect(newPlayer.str).toEqual(40);
     expect(newPlayer.magic).toEqual(90);
+  });
 
+  test("should set str to 70 and magic to 70", () => {
+    newPlayer.addHunter();
+    expect(newPlayer.str).toEqual(70);
+    expect(newPlayer.magic).toEqual(70);
   });
 });
