@@ -20,4 +20,8 @@ export default class Player {
     this.magic = 70;
   }
 
+  addDruid(){
+    this.str = 80;
+    this.magic = 80;
+  }
 }

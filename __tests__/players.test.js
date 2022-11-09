@@ -29,4 +29,9 @@ describe("Player", () => {
     expect(newPlayer.str).toEqual(70);
     expect(newPlayer.magic).toEqual(70);
   });
+  test("should set str to 80 and magic to 80",  ()=> {
+    newPlayer.addDruid();
+    expect(newPlayer.str).toEqual(80);
+    expect(newPlayer.magic).toEqual(80);
+  });
 });
