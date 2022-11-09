@@ -34,4 +34,10 @@ describe("Player", () => {
     expect(newPlayer.str).toEqual(80);
     expect(newPlayer.magic).toEqual(80);
   });
+
+  test("should determine hit based on random number", () => {
+    let damage = newPlayer.rollDmg();
+    expect(damage).toEqual(10);
+  });
+
 });
