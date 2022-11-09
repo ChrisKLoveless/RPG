@@ -1,11 +1,11 @@
 
-import Player from  "../src/js/players.js";
+import Player from "../src/js/players.js";
 
-describe ("Player", () => {
+describe("Player", () => {
   let newPlayer;
 
   beforeEach(() => {
-    newPlayer = new Player(100,0,0);
+    newPlayer = new Player(100, 0, 0);
   });
 
   test("it should make a player object", () => {
@@ -18,4 +18,10 @@ describe ("Player", () => {
     expect(newPlayer.magic).toEqual(40);
   });
 
+  test("should set str to 40 and magic to 90", () => {
+    newPlayer.addMage();
+    expect(newPlayer.str).toEqual(40);
+    expect(newPlayer.magic).toEqual(90);
+
+  });
 });

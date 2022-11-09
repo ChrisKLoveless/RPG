@@ -9,5 +9,8 @@ export default class Player {
     this.str = 90;
     this.magic = 40; 
   }
-  
+  addMage() {
+    this.str = 40;
+    this.magic = 90; 
+  }
 }
