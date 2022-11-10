@@ -44,9 +44,10 @@ describe("Player", () => {
     let hit = newPlayer.critHit(75);
     expect(hit).toEqual("crit hit");
   });
+  
   test("should be determine a reg hit if a roll is less than 60", () => {
     let hit = newPlayer.regHit(40);
     expect(hit).toEqual("reg hit");
-  })
+  });
 
 });
