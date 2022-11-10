@@ -28,7 +28,7 @@ export default class Player {
   randomNum() {
     let roll = Math.floor(Math.random() * (100) + 1);
     if (roll <= 100) {
-      return "hit";
+      return roll;
     }
   }
 
@@ -37,10 +37,12 @@ export default class Player {
       return "crit hit";
     }
   }
+
   regHit(num) {
     if(num <= 60) {
       return "reg hit";
     }
   }
+
 }
 
