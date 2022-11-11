@@ -1,7 +1,10 @@
+
+
 export default class Monster {
   constructor(hp) {
     this.hp = hp;
   }
+
 
   monsterCrit() {
     let critHit = 25;
@@ -21,13 +24,19 @@ export default class Monster {
   }
 
   attack() {
-    let newMonster;
     let num = Math.floor(Math.random() * (100) + 1);
-    if (num <= 60) {
-      newMonster.hp -= 10;
+    if (this.hp <= 0) {
+      return "You won!";
+    } else if (num <= 60) {
+      this.hp -= 10;
     } else {
-      newMonster.hp -= 25;
+      this.hp -= 25;
     }
   }
+  isDead() {
+    if (this.hp <= 0) {
+      return "you won";
+    }
 
-}
+  }
+} 

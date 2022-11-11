@@ -2,3 +2,32 @@
   height: 500px;
   width: 500px;
 }
+
+#btn-attack {
+  border-radius: 20px;
+}
+
+#btn-warrior {
+  border-radius: 20px;
+}
+
+#btn-hunter {
+  border-radius: 20px;
+}
+
+#btn-mage {
+  border-radius: 20px;
+}
+
+#btn-druid {
+  border-radius: 20px;
+}
+
+#dead {
+  color: crimson;
+}
+
+h1{
+  font-weight: bolder;
+  
+}

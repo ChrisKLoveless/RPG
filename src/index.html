@@ -2,25 +2,34 @@
 <html lang="en-US">
 
 <head>
-  <title>Ultimate Showdown</title>
+  <title>Battle Royale</title>
 </head>
 
 <body class="bg-dark">
   <div class="container">
     <div class="jumbotron bg-warning text-center">
-      <h1>This is an RPG</h1>
+      <h1><u>Battle Royale</u></h1>
     </div>
+    
 
-    <div class="jumbotron invisible" id="stats">
-      <p>Hp:<span id="hp-stat"></span></p>
-      <p>Strength:<span id="strength-stat"></span></p>
-      <p>Magic:<span id="magic-stat"></span></p>
-      <img src="https://www.pngkey.com/png/detail/128-1288231_vicious-little-beasts-monsters-rpg.png"
-        alt="A photo of a monster" id="monster-pic">
-      <h3>Monster HP: <span id="monster-hp"></span></h3>
-      <button id="btn-attack" class="btn btn-danger" type="submit">Attack</button>
+    <div class="card invisible" id="stats">
+      <div class="card-body">
+        <form id="attack">
+          <div class="card-title">
+            <p>Hp:<span id="hp-stat"></span></p>
+            <p>Strength:<span id="strength-stat"></span></p>
+            <p>Magic:<span id="magic-stat"></span></p>
+            <img src="https://www.pngkey.com/png/detail/128-1288231_vicious-little-beasts-monsters-rpg.png"
+              alt="A photo of a monster" id="monster-pic">
+          </div>
+          <h2 id="dead"><strong></strong></h2>
+          <h3 class="card-text">Monster HP: <span id="monster-hp"></span></h3>
+          <button id="btn-attack" class="btn btn-danger" type="submit">Attack</button>
+        </form>
+      </div>
     </div>
   </div>
+
   <!-- ------------------------------------------------ -->
   <div class="container">
     <div class="row">
@@ -30,9 +39,9 @@
             <img src="https://i.pinimg.com/originals/e8/84/ed/e884edb4d0d4759157fad2b08b900f0e.jpg" class="card-img-top"
               alt="A picture of a warrior">
             <div class="card-body">
-              <h5 class="card-title">Warrior</h5>
+              <h5 class="card-title"><u>Warrior</u></h5>
               <p class="card-text">Warrior's are powerful, but lack magical abilities</p>
-              <button type="submit" class="btn btn-success">Create Warrior Class</button>
+              <button type="submit" class="btn btn-success" id="btn-warrior">Create Warrior Class</button> 
             </div>
           </div>
         </div>
@@ -45,9 +54,9 @@
             <img src="http://girileza.weebly.com/uploads/1/2/9/2/12920711/5747858.png?269" class="card-img-top"
               alt="A picture of a druid">
             <div class="card-body">
-              <h5 class="card-title">Druid</h5>
+              <h5 class="card-title"><u>Druid</u></h5>
               <p class="card-text">Druid's are powerful with magic and strength</p>
-              <button type="submit" class="btn btn-danger">Create Druid Class </button>
+              <button type="submit" class="btn btn-danger" id="btn-druid">Create Druid Class </button> 
             </div>
           </div>
         </div>
@@ -61,9 +70,9 @@
             <img src="https://www.kindpng.com/picc/m/275-2758424_mage-png-transparent-png.png" class="card-img-top"
               alt="A picture of a mage">
             <div class="card-body">
-              <h5 class="card-title">Mage</h5>
+              <h5 class="card-title"><u>mage</u></h5>
               <p class="card-text">Mage's are powerful with magic, but lack strength</p>
-              <button type="submit" class="btn btn-info">Create Mage Class</button>
+              <button type="submit" class="btn btn-info" id="btn-mage">Create Mage Class</button>
             </div>
           </div>
         </div>
@@ -76,9 +85,9 @@
               src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2b146040-0049-4b30-b35a-27be6de37b41/dbtzkjf-072165d8-083a-4a26-9e85-25ecabe87165.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJiMTQ2MDQwLTAwNDktNGIzMC1iMzVhLTI3YmU2ZGUzN2I0MVwvZGJ0emtqZi0wNzIxNjVkOC0wODNhLTRhMjYtOWU4NS0yNWVjYWJlODcxNjUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BHpTUPJA6UfFRdtD6lRMBeqDuQjlKv1Mdmi5SQLADbk"
               class="card-img-top" alt="A picture of a hunter">
             <div class="card-body">
-              <h5 class="card-title">Hunter</h5>
+              <h5 class="card-title"><u>Hunter</u></h5>
               <p class="card-text">Hunters are a powerful with magic, and strength</p>
-              <button type="submit" class="btn btn-warning">Create Hunter Class.</button>
+              <button type="submit" class="btn btn-warning" id="btn-hunter">Create Hunter Class.</button>
             </div>
           </div>
         </div>

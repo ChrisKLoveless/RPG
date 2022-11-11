@@ -5,7 +5,7 @@ import './css/styles.css';
 import Monster from "../src/js/monster";
 
 // let newPlayer = new Player(100, 0, 0);
-let newMonster = new Monster(200);
+let newMonst = new Monster(200);
 
 function handleWarrior(event) {
 	event.preventDefault();
@@ -13,7 +13,7 @@ function handleWarrior(event) {
 	document.getElementById("hp-stat").innerHTML = 100;
 	document.getElementById("strength-stat").innerHTML = 90;
 	document.getElementById("magic-stat").innerHTML = 40;
-	document.getElementById("monster-hp").innerHTML = newMonster.hp;
+	document.getElementById("monster-hp").innerHTML = newMonst.hp;
 
 	document.getElementById("warrior-card").classList.add("invisible");
 	document.getElementById("druid-card").classList.add("invisible");
@@ -24,11 +24,10 @@ function handleWarrior(event) {
 
 function handleDruid(event) {
 	event.preventDefault();
-
 	document.getElementById("hp-stat").innerHTML = 100;
 	document.getElementById("strength-stat").innerHTML = 80;
 	document.getElementById("magic-stat").innerHTML = 80;
-	document.getElementById("monster-hp").innerHTML = newMonster.hp;
+	document.getElementById("monster-hp").innerHTML = newMonst.hp;
 
 	document.getElementById("warrior-card").classList.add("invisible");
 	document.getElementById("druid-card").classList.add("invisible");
@@ -43,7 +42,7 @@ function handleMage(event) {
 	document.getElementById("hp-stat").innerHTML = 100;
 	document.getElementById("strength-stat").innerHTML = 40;
 	document.getElementById("magic-stat").innerHTML = 90;
-	document.getElementById("monster-hp").innerHTML = newMonster.hp;
+	document.getElementById("monster-hp").innerHTML = newMonst.hp;
 
 	document.getElementById("warrior-card").classList.add("invisible");
 	document.getElementById("druid-card").classList.add("invisible");
@@ -58,7 +57,7 @@ function handleHunter(event) {
 	document.getElementById("hp-stat").innerHTML = 100;
 	document.getElementById("strength-stat").innerHTML = 70;
 	document.getElementById("magic-stat").innerHTML = 70;
-	document.getElementById("monster-hp").innerHTML = newMonster.hp;
+	document.getElementById("monster-hp").innerHTML = newMonst.hp;
 
 	document.getElementById("warrior-card").classList.add("invisible");
 	document.getElementById("druid-card").classList.add("invisible");
@@ -68,8 +67,12 @@ function handleHunter(event) {
 }
 function handleAttack(event) {
 	event.preventDefault();
-	newMonster.attack();
-	document.getElementById("monster-hp").innerHTML = newMonster.hp;
+	if(newMonst.isDead()) {
+		document.getElementById("dead").innerHTML = "You Have Won The Battle!!!";
+	} else {
+		newMonst.attack();
+	document.getElementById("monster-hp").innerHTML = newMonst.hp;
+	}
 }
 
 window.addEventListener("load", function () {
@@ -77,8 +80,6 @@ window.addEventListener("load", function () {
 	document.getElementById("druid").addEventListener("submit", handleDruid);
 	document.getElementById("mage").addEventListener("submit", handleMage);
 	document.getElementById("hunter").addEventListener("submit", handleHunter);
-	document.getElementById("btn-attack").addEventListener("submit", handleAttack);
-	
-
+	document.getElementById("attack").addEventListener("submit", handleAttack);
 });
 
